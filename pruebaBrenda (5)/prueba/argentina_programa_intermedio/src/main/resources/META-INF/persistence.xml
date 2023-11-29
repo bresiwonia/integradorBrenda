@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="JPA_PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        //*******************************************
+        <class>TPI.Model.AreaComercial</class>
+        <class>TPI.Model.Cliente</class>
+        <class>TPI.Model.Contrato</class>
+        <class>TPI.Model.Especializacion</class>
+        <class>TPI.Model.Incidentes</class>
+        <class>TPI.Model.MesaDeAyuda</class>
+        <class>TPI.Model.RRHH</class>
+        <class>TPI.Model.Tecnico</class>
+        <class>TPI.Model.TipoDeProblema</class>
+
+
+
+
+        <properties>
+            <property name="javax.persistence.jdbc.url"  value="jdbc:mysql://localhost:3306/db_argprog?zeroDateTimeBehavior=convertToNull&amp;serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <!--property
+                    name="javax.persistence.schema-generation.database.action"
+                    value="create"/-->
+            <property name="eclipselink.ddl-generation"
+                      value="create-or-extend-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
